@@ -10,7 +10,7 @@ coauthor: liupeixin
 
 # WisdomGarden Technology Blog
 
-![Build Status](https://github.com/wisdom-garden/wisdom-garden.github.io/workflows/build/badge.svg)](https://github.com/wisdom-garden/wisdom-garden.github.io/workflows/build/badge.svg)
+[![Build Status](https://github.com/wisdom-garden/wisdom-garden.github.io/workflows/build/badge.svg)](https://github.com/wisdom-garden/wisdom-garden.github.io/workflows/build/badge.svg)
 
 
 ## Prerequisites
@@ -55,6 +55,11 @@ coauthor: liupeixin
 - `git commit`
 - `git push`
 
+## picture host
+- recommend qiniu or sina
+- manually upload get assets url use in article
+- TODO: picture host tools will come in the future
+
 ## IDE Recommend
 - VS Code
 - Sublime Text
@@ -65,9 +70,16 @@ coauthor: liupeixin
 - `hexo --help`
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-e.g.
+### Site
+- Github: [Github](https://wisdom-garden.github.io/)
+- Coding: [Coding](http://peixinliu.coding.me/wg-tech-blog/)
+
+
+### e.g.
 - `hexo new "你好" -s hello`
+
 url:  /2019/12/04/hello/
 
 - `hexo new "中文"`
+
 url: /2019/12/04/%25E4%25B8%25AD%25E6%2596%2587/
