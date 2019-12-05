@@ -101,7 +101,7 @@ deploy:
   type: 'git'
   repo:
     github: git@github.com:wisdom-garden/wisdom-garden.github.io.git,master
-    coding: git@git.coding.net:peixinliu/wg-tech-blog.git,master
+    coding: git@e.coding.net:wisdomgarden/wisdomgarden.git,master
 
 # hexo-easy-tags-plugin
 easy_tags_plugin:

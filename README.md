@@ -13,9 +13,9 @@
 
 
 ## Setup
-- `git clone git@github.com:wisdom-garden/wisdom-garden.github.io.git wg-tech-blog`
+- `git clone -b hexo-source git@github.com:wisdom-garden/wisdom-garden.github.io.git wg-tech-blog`
 - `cd wg-tech-blog`
-- **`git checkout hexo-source`** Important!!! **Never checkout master**
+- **Never checkout master**
 - `nvm use` (optional)
 - `yarn global add hexo-cli` or `npm install -g hexo-cli`
 - `yarn install` or `npm install`
@@ -62,7 +62,7 @@
 
 ### Site
 - Github: [Github](https://wisdom-garden.github.io/)
-- Coding: [Coding](http://peixinliu.coding.me/wg-tech-blog/)
+- Coding: [Coding](http://lwkd88.coding-pages.com/)
 
 
 ### e.g.
