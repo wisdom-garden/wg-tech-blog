@@ -7,7 +7,7 @@ title: WG Tech Blog
 subtitle: ''
 description: 'WisdomGarden Technology Blog'
 keywords: WisdomGarden, WG, Technology, Tech, LMS, URP, Tronclass, ROOMIS, RM, URP, Edu, TCA, TronCast, InSight, InClass
-author: WisdomGarden
+author: Wisdom Garden
 language:
   - en
   - zh-CN
@@ -15,7 +15,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://wisdom-garden.github.io
+url: https://blog.tronclass.com.cn
 root: /
 permalink: :year/:month/:day/:urlname/
 permalink_defaults:
