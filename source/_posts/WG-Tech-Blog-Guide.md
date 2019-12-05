@@ -1,7 +1,7 @@
 ---
 uuid: 5c5da3c0-168a-11ea-8fce-adc538f4fca4
 title: WG Tech Blog Guide
-urlname: WG Tech Blog Guide
+urlname: wg-tech-blog-guide
 date: 2019-12-04 19:36:49
 tags:
 categories:
