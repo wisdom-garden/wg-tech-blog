@@ -1,10 +1,13 @@
 ---
 uuid: 5c5da3c0-168a-11ea-8fce-adc538f4fca4
 title: WG Tech Blog Guide
-urlname: wg-tech-blog-guide
+s: wg-tech-blog-guide
 date: 2019-12-04 19:36:49
 tags:
+  - hexo
+  - guid
 categories:
+  - Technology
 coauthor: liupeixin
 ---
 # Wisdom Garden Technology Blog
@@ -21,14 +24,15 @@ coauthor: liupeixin
 * join team: [Wisdom Garden](https://github.com/wisdom-garden)
 
 
-## Setup
+## <a id="user-content-setup" href="#setup">Setup</a>
 - `git clone -b hexo-source git@github.com:wisdom-garden/wisdom-garden.github.io.git wg-tech-blog`
 - `cd wg-tech-blog`
+- `git config push.default current`
 - **Never checkout master**
 - `nvm use` (optional)
 - `yarn global add hexo-cli` or `npm install -g hexo-cli`
 - `yarn install` or `npm install`
-
+<!-- more -->
 
 ## Write
 - `Usage: hexo new [layout] <title>`
