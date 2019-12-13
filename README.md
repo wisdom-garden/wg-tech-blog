@@ -12,14 +12,15 @@
 * join team: [Wisdom Garden](https://github.com/wisdom-garden)
 
 
-## Setup
-- `git clone -b hexo-source git@github.com:wisdom-garden/wisdom-garden.github.io.git wg-tech-blog`
+## <a id="user-content-setup" href="#setup">Setup</a>
+- `git clone -b hexo-source --recursive git@github.com:wisdom-garden/wisdom-garden.github.io.git wg-tech-blog`
 - `cd wg-tech-blog`
 - **Never checkout master**
+- `git config push.default current`
 - `nvm use` (optional)
 - `yarn global add hexo-cli` or `npm install -g hexo-cli`
 - `yarn install` or `npm install`
-
+<!-- more -->
 
 ## Write
 - `Usage: hexo new [layout] <title>`
