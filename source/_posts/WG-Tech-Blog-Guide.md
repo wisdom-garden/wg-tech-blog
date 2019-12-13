@@ -10,8 +10,6 @@ categories:
   - Technology
 coauthor: liupeixin
 ---
-# Wisdom Garden Technology Blog
-
 [![Build Status](https://github.com/wisdom-garden/wisdom-garden.github.io/workflows/build/badge.svg)](https://github.com/wisdom-garden/wisdom-garden.github.io/workflows/build/badge.svg)
 
 
@@ -43,6 +41,7 @@ coauthor: liupeixin
 - `hexo serve`
 
 ## Publish
+- `git pull origin hexo-source -r` only pull current branch
 - `git commit`
 - `git push`
 

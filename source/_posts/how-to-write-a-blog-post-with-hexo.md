@@ -127,10 +127,11 @@ bala bala bala
 ```
 $ git add .
 $ git commit -m 'add post how to write a blog post with hexo'
+$ git pull origin hexo-source -r
 $ git push
 ```
 
-当然，请遵循日常的git操作，比如 先git pull -r，除非文章名完全重名，大概率不会有冲突合并。
+当然，请遵循日常的git操作，比如 先 pull, rebase，除非文章名完全重名，大概率不会有冲突合并。
 
 过了1分钟左右，你就能看到你的文章安静的躺在了 我们的技术博客里: [https://blog.tronclass.com.cn/](https://blog.tronclass.com.cn/)
 
@@ -138,6 +139,7 @@ $ git push
 
 几点说明:
 
+- 每次 pull 仅pull当前分支。 `git pull origin hexo-source -r` 否则会把master的也fetch下来。
 - Front-matter 默认使用 **YAML** 语法，数组(多个参数，比如标签，分类，作者)，可以这样写。
   ```
   tags:

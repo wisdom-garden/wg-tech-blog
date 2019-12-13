@@ -31,6 +31,7 @@
 - `hexo serve`
 
 ## Publish
+- `git pull origin hexo-source -r` only pull current branch
 - `git commit`
 - `git push`
 
