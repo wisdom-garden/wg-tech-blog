@@ -2,10 +2,10 @@
 uuid: 3e37df10-1cec-11ea-a768-17a87e931740
 title: 如何用Hexo写一篇博客
 s: how-to-write-a-blog-post-with-hexo
-date: 2019-12-13 01:01:36
+date: 2019-12-12 01:01:36
 tags:
   - hexo
-  - guid
+  - guide
 categories:
   - Technology
 coauthor: liupeixin

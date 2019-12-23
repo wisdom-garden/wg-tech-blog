@@ -5,7 +5,7 @@ s: wg-tech-blog-guide
 date: 2019-12-04 19:36:49
 tags:
   - hexo
-  - guid
+  - guide
 categories:
   - Technology
 coauthor: liupeixin
@@ -20,6 +20,7 @@ coauthor: liupeixin
 * nvm (optional)
 * git config --global user.name "your name will be show blog"
 * join team: [Wisdom Garden](https://github.com/wisdom-garden)
+* add SSH key to your GitHub account [help](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
 
 
 ## <a id="user-content-setup" href="#setup">Setup</a>
