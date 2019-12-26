@@ -74,7 +74,7 @@ max_line_length = 120
 |trim_trailing_whitespace|是否删除行尾空格| true, false |
 |insert_final_newline|文件是否以空行结束| true, false |
 |root|true, false| true, false |
-|max_line_length|最大行款(不是所有编辑器都支持)| 数字, off |
+|max_line_length|最大行宽(不是所有编辑器都支持)| 数字, off |
 
 编辑器支持情况见 [这里](https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties#widely-supported-by-editors)
 

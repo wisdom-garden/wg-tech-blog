@@ -4,5 +4,5 @@ date: {{ date }}
 tags:
 categories:
 coauthor:
-s: {{ s or title }}
+s: {{ slug or title }}
 ---
