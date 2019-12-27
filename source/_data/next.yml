@@ -23,3 +23,15 @@ footer:
 
 google_analytics:
   tracking_id: UA-154015352-1
+
+post_meta:
+  updated_at:
+    enable: false
+    another_day: true
+
+leancloud_visitors:
+  enable: true
+  app_id: "CP8WSyQWeQ5mmzmbSmnEWMEi-MdYXbMMI"
+  app_key: "FDvJGLIS6IClTgCBJ6yhUTJG"
+  security: true
+  betterPerformance: true

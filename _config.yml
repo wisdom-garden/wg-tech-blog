@@ -98,10 +98,11 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: "git"
-  repo:
-    github: git@github.com:wisdom-garden/wisdom-garden.github.io.git,master
-    coding: git@e.coding.net:wisdomgarden/wisdomgarden.git,master
+  - type: leancloud_counter_security_sync
+  - type: "git"
+    repo:
+      github: git@github.com:wisdom-garden/wisdom-garden.github.io.git,master
+      coding: git@e.coding.net:wisdomgarden/wisdomgarden.git,master
 
 # hexo-easy-tags-plugin
 easy_tags_plugin:
@@ -127,3 +128,10 @@ asset_pipeline:
     enable: true
   html_minifier:
     enable: true
+
+leancloud_counter_security:
+  enable_sync: true
+  app_id: "CP8WSyQWeQ5mmzmbSmnEWMEi-MdYXbMMI"
+  app_key: "FDvJGLIS6IClTgCBJ6yhUTJG"
+  username: "blog_wg_ops"
+  password: "dcasci209e8cjoiascj"

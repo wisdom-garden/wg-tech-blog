@@ -11,20 +11,20 @@ categories:
 coauthor: liupeixin
 ---
 
-关于如何使用博客系统 [WG Tech Blog Guide](https://blog.tronclass.com.cn/2019/12/04/wg-tech-blog-guide/) 这篇文章已经简述了流程，有 Git 使用基础，了解 Markdown 语法的人可无障碍使用。
+关于如何使用博客系统 [WG Tech Blog Guide](https://blog.tronclass.com.cn/2019/12/04/wg-blog-guide/) 这篇文章已经简述了流程，有 Git 使用基础，了解 Markdown 语法的人可无障碍使用。
 
 鉴于有些同事不了解 Git，也不太熟悉 Markdown，再撰一文，更详细的阐述步骤。
 
-hexo 的使用，都是基于命令行的。在做好 [Setup](https://blog.tronclass.com.cn/2019/12/04/wg-tech-blog-guide/#setup) 之后，就可以执行 hexo 命令了，流程如下：
+hexo 的使用，都是基于命令行的。在做好 [Setup](https://blog.tronclass.com.cn/2019/12/04/wg-blog-guide/#setup) 之后，就可以执行 hexo 命令了，流程如下：
 <!-- more -->
-![hexo-flow](https://ohukd8pbq.qnssl.com/wg-tech-blog/assets/hexo-flow.jpg)
+![hexo-flow](https://ohukd8pbq.qnssl.com/wg-blog/assets/hexo-flow.jpg)
 
 
 
 比如我们要写一篇文章，标题叫 《如何用Hexo写一篇博客》，在命令行输入
 `$ hexo new "如何用Hexo写一篇博客"`
 然后命令行会显示:
-`$ INFO  Created: ~/Work/wg/wg-tech-blog/source/_posts/如何用Hexo写一篇博客.md`
+`$ INFO  Created: ~/Work/wg/wg-blog/source/_posts/如何用Hexo写一篇博客.md`
 
 表示你创建了一个 名字为 `如何用Hexo写一篇博客.md` 的Markdown文件。然后用某种文本编辑器打开该文件，我用的Typora。Sublime Text, VS Code 都可以，只要能方便书写 Markdown 都行。
 
@@ -76,7 +76,7 @@ coauthor: liupeixin
 
 输出
 
-`$ INFO  Created: ~/Work/wg/wg-tech-blog/source/_posts/how-to-write-a-blog-post-with-hexo.md`
+`$ INFO  Created: ~/Work/wg/wg-blog/source/_posts/how-to-write-a-blog-post-with-hexo.md`
 
 文章 URL 是 `http://localhost:4000/2019/12/12/how-to-write-a-blog-post-with-hexo/`
 
@@ -127,11 +127,13 @@ bala bala bala
 ```
 $ git add .
 $ git commit -m 'add post how to write a blog post with hexo'
-$ git pull origin hexo-source -r
+$ git pr
 $ git push
 ```
 
 当然，请遵循日常的git操作，比如 先 pull, rebase，除非文章名完全重名，大概率不会有冲突合并。
+
+如果 [Setup](https://blog.tronclass.com.cn/2019/12/04/wg-blog-guide/#setup) 时设定了 `git config --local alias.pr 'pull -r origin hexo-source'` 只需要 `git pr`。不喜欢 alias 也可以直接 `git pull origin hexo-source -r`
 
 过了1分钟左右，你就能看到你的文章安静的躺在了 我们的技术博客里: [https://blog.tronclass.com.cn/](https://blog.tronclass.com.cn/)
 
@@ -139,7 +141,7 @@ $ git push
 
 几点说明:
 
-- 每次 pull 仅pull当前分支。 `git pull origin hexo-source -r` 否则会把master的也fetch下来。
+- 每次 pull 仅 pull 当前分支。`git pr` or ~~`git pull origin hexo-source -r`~~ 否则会把master的也fetch下来(太慢，且无用)。
 - Front-matter 默认使用 **YAML** 语法，数组(多个参数，比如标签，分类，作者)，可以这样写。
   ```
   tags:

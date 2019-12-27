@@ -1,7 +1,7 @@
 ---
 uuid: 5c5da3c0-168a-11ea-8fce-adc538f4fca4
-title: WG Tech Blog Guide
-s: wg-tech-blog-guide
+title: WG Blog Guide
+s: wg-blog-guide
 date: 2019-12-04 19:36:49
 tags:
   - hexo
@@ -24,10 +24,11 @@ coauthor: liupeixin
 
 
 ## <a id="user-content-setup" href="#setup">Setup</a>
-- `git clone -b hexo-source --recursive git@github.com:wisdom-garden/wisdom-garden.github.io.git wg-tech-blog`
-- `cd wg-tech-blog`
+- `git clone -b hexo-source --recursive git@github.com:wisdom-garden/wisdom-garden.github.io.git wg-blog`
+- `cd wg-blog`
 - **Never checkout master**
 - `git config push.default current`
+- `git config --local alias.pr 'pull -r origin hexo-source'`
 - `nvm use` (optional)
 - `yarn global add hexo-cli` or `npm install -g hexo-cli`
 - `yarn install` or `npm install`
@@ -36,18 +37,18 @@ coauthor: liupeixin
 ## Write
 - `Usage: hexo new [layout] <title>`
 - `hexo new "title"`
-- use any tool edit `~/xxxxxx/wg-tech-blog/source/_posts/title.md`
+- use any tool edit `~/xxxxxx/wg-blog/source/_posts/title.md`
 
 ## Preview
 - `hexo serve`
 
 ## Publish
-- `git pull origin hexo-source -r` only pull current branch
+- `git pr` or ~~`git pull origin hexo-source -r`~~ only pull current branch
 - `git commit`
 - `git push`
 
 ## Update Article
-- edit `~/xxxxxx/wg-tech-blog/source/_posts/title.md`
+- edit `~/xxxxxx/wg-blog/source/_posts/title.md`
 - update ./source/_posts/\[title-folder\] assets
 - `git commit`
 - `git push`
