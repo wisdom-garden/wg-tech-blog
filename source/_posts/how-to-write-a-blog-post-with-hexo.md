@@ -11,11 +11,11 @@ categories:
 coauthor: liupeixin
 ---
 
-关于如何使用博客系统 [WG Tech Blog Guide](https://blog.tronclass.com.cn/2019/12/04/wg-blog-guide/) 这篇文章已经简述了流程，有 Git 使用基础，了解 Markdown 语法的人可无障碍使用。
+关于如何使用博客系统 [WG Tech Blog Guide](https://blog.wisdomgarden.com/2019/12/04/wg-blog-guide/) 这篇文章已经简述了流程，有 Git 使用基础，了解 Markdown 语法的人可无障碍使用。
 
 鉴于有些同事不了解 Git，也不太熟悉 Markdown，再撰一文，更详细的阐述步骤。
 
-hexo 的使用，都是基于命令行的。在做好 [Setup](https://blog.tronclass.com.cn/2019/12/04/wg-blog-guide/#setup) 之后，就可以执行 hexo 命令了，流程如下：
+hexo 的使用，都是基于命令行的。在做好 [Setup](https://blog.wisdomgarden.com/2019/12/04/wg-blog-guide/#setup) 之后，就可以执行 hexo 命令了，流程如下：
 <!-- more -->
 ![hexo-flow](https://ohukd8pbq.qnssl.com/wg-blog/assets/hexo-flow.jpg)
 
@@ -133,9 +133,9 @@ $ git push
 
 当然，请遵循日常的git操作，比如 先 pull, rebase，除非文章名完全重名，大概率不会有冲突合并。
 
-如果 [Setup](https://blog.tronclass.com.cn/2019/12/04/wg-blog-guide/#setup) 时设定了 `git config --local alias.pr 'pull -r origin hexo-source'` 只需要 `git pr`。不喜欢 alias 也可以直接 `git pull origin hexo-source -r`
+如果 [Setup](https://blog.wisdomgarden.com/2019/12/04/wg-blog-guide/#setup) 时设定了 `git config --local alias.pr 'pull -r origin hexo-source'` 只需要 `git pr`。不喜欢 alias 也可以直接 `git pull origin hexo-source -r`
 
-过了1分钟左右，你就能看到你的文章安静的躺在了 我们的技术博客里: [https://blog.tronclass.com.cn/](https://blog.tronclass.com.cn/)
+过了1分钟左右，你就能看到你的文章安静的躺在了 我们的技术博客里: [https://blog.wisdomgarden.com](https://blog.wisdomgarden.com)
 
 
 
