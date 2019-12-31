@@ -69,7 +69,7 @@ require(["a","b"],function($,_){
 });
 ```
 
-# 3.CMD和SeaJs
+## 3.CMD和SeaJs
 AMD使用前置依赖，提前执行，在定义模块的时候就要声明其依赖的模块,而CMD使用就近依赖，只有在用到某个模块的时候才会require。SeaJs则是CMD规范的实现。
 ```
 // 定义模块 a.js
