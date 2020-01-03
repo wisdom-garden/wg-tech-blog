@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en,zh-CN,default"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta name="generator" content="Hexo 4.2.0"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next-5bcbd18f4de3fa448e0451b020974c18.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-a9ba5cde09a0e0fcac70b9154c968b9d.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-6b57f39f26ac59770807046a93a0e34f.png"><link rel="mask-icon" href="/images/logo.svg" color="#222"><link rel="stylesheet" href="/css/main-fa79ff7d3f298c19622960cf4a07afad.css"><link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css"><script id="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:new URL("https://blog.wisdomgarden.com").hostname,root:"/",scheme:"Pisces",version:"7.6.0",exturl:!1,sidebar:{position:"left",display:"post",padding:18,offset:12,onmobile:!1},copycode:{enable:!1,show_result:!1,style:null},back2top:{enable:!0,sidebar:!1,scrollpercent:!1},bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!1,mediumzoom:!1,lazyload:!1,pangu:!1,algolia:{appID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}},localsearch:{enable:!1,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1},path:"",motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}}}</script><meta name="description" content="测试计划是否有存在的必要？相对于传统瀑布型开发模式庞大的、正式的测试计划文档，敏捷测试中的测试计划依旧存在，只是从原来的一次性集中制定测试计划，变成了以迭代为周期持续地制定测试计划，这样的短期测试计划可以迅速地根据实际情况进行调整，响应变化，拥抱变化。缺少测试计划会有哪些影响？具体的测试范围以及测试策略难以确定，导致测试工作碎片化，不够系统化；测试资源难以预估和分配，造成测试工程师的分工不明确，引"><meta property="og:type" content="article"><meta property="og:title" content="Agile Test Plan"><meta property="og:url" content="https://blog.wisdomgarden.com/2019/12/30/agile-test-plan/"><meta property="og:site_name" content="WG Product Blog"><meta property="og:description" content="测试计划是否有存在的必要？相对于传统瀑布型开发模式庞大的、正式的测试计划文档，敏捷测试中的测试计划依旧存在，只是从原来的一次性集中制定测试计划，变成了以迭代为周期持续地制定测试计划，这样的短期测试计划可以迅速地根据实际情况进行调整，响应变化，拥抱变化。缺少测试计划会有哪些影响？具体的测试范围以及测试策略难以确定，导致测试工作碎片化，不够系统化；测试资源难以预估和分配，造成测试工程师的分工不明确，引"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2019-12-30T15:08:12.000Z"><meta property="article:modified_time" content="2020-01-03T02:20:11.798Z"><meta property="article:author" content="WisdomGarden Product"><meta property="article:tag" content="WisdomGarden"><meta property="article:tag" content=" WG"><meta property="article:tag" content=" Technology"><meta property="article:tag" content=" Tech"><meta property="article:tag" content=" LMS"><meta property="article:tag" content=" URP"><meta property="article:tag" content=" Tronclass"><meta property="article:tag" content=" ROOMIS"><meta property="article:tag" content=" RM"><meta property="article:tag" content=" URP"><meta property="article:tag" content=" Edu"><meta property="article:tag" content=" TCA"><meta property="article:tag" content=" TronCast"><meta property="article:tag" content=" InSight"><meta property="article:tag" content=" InClass"><meta name="twitter:card" content="summary"><link rel="canonical" href="https://blog.wisdomgarden.com/2019/12/30/agile-test-plan/"><script id="page-configurations">CONFIG.page={sidebar:"",isHome:!1,isPost:!0,isPage:!1,isArchive:!1}</script><title>Agile Test Plan | WG Product Blog</title><script async src="https://www.googletagmanager.com/gtag/js?id=UA-154015352-1"></script><script>if(CONFIG.hostname===location.hostname){function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-154015352-1")}</script><noscript><style>.sidebar-inner,.use-motion .brand,.use-motion .collection-header,.use-motion .comments,.use-motion .menu-item,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line-before i{left:initial}.use-motion .logo-line-after i{right:initial}</style></noscript></head><body itemscope itemtype="http://schema.org/WebPage"><div class="container use-motion"><div class="headband"></div><header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-container"><div class="site-meta"><div><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">WG Product Blog</span> <span class="logo-line-after"><i></i></span></a></div></div><div class="site-nav-toggle"><div class="toggle" aria-label="Toggle navigation bar"><span class="toggle-line toggle-line-first"></span> <span class="toggle-line toggle-line-middle"></span> <span class="toggle-line toggle-line-last"></span></div></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a></li></ul></nav></div></header><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span>0%</span></div><main class="main"><div class="main-inner"><div class="content-wrap"><div class="content"><div class="posts-expand"><article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en"><link itemprop="mainEntityOfPage" href="https://blog.wisdomgarden.com/2019/12/30/agile-test-plan/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/avatar.gif"><meta itemprop="name" content="WisdomGarden Product"><meta itemprop="description" content="WisdomGarden Product Blog"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="WG Product Blog"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Agile Test Plan</h1><div class="post-meta"><span class="post-meta-item"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i> </span><span class="post-meta-item-text">Posted on</span> <time title="Created: 2019-12-30 23:08:12" itemprop="dateCreated datePublished" datetime="2019-12-30T23:08:12+08:00">2019-12-30</time> </span><span id="/2019/12/30/agile-test-plan/" class="post-meta-item leancloud_visitors" data-flag-title="Agile Test Plan" title="Views"><span class="post-meta-item-icon"><i class="fa fa-eye"></i> </span><span class="post-meta-item-text">Views: </span><span class="leancloud-visitors-count"></span> </span><span class="post-meta-item"><span class="post-meta-item-icon"><i class="fa fa-copyright"></i> </span><span class="post-meta-item-text">Author: </span><span>wangjing</span></span></div></header><div class="post-body" itemprop="articleBody"><h4 id="测试计划是否有存在的必要？"><a href="#测试计划是否有存在的必要？" class="headerlink" title="测试计划是否有存在的必要？"></a>测试计划是否有存在的必要？</h4><p>相对于传统瀑布型开发模式庞大的、正式的测试计划文档，敏捷测试中的测试计划依旧存在，只是从原来的一次性集中制定测试计划，变成了以迭代为周期持续地制定测试计划，这样的短期测试计划可以迅速地根据实际情况进行调整，响应变化，拥抱变化。</p><h4 id="缺少测试计划会有哪些影响？"><a href="#缺少测试计划会有哪些影响？" class="headerlink" title="缺少测试计划会有哪些影响？"></a>缺少测试计划会有哪些影响？</h4><ul><li>具体的测试范围以及测试策略难以确定，导致测试工作碎片化，不够系统化；</li><li>测试资源难以预估和分配，造成测试工程师的分工不明确，引发某些测试工作被重复执行而有些测试则被遗漏的问题;</li><li>测试的整体进度不可控，甚至很难确切知道目前测试的完成情况，对于测试完成时间就更难预估准确的时间节点;</li><li>整个项目对潜在风险的抵抗能力很弱，很难应对需求的变更以及其他突发事件。<br>因此，一份好的测试计划要包括：测试范围、测试策略、测试资源、测试进度和测试风险预估这几项。</li></ul><h4 id="一份完整的测试计划应包括哪些内容？"><a href="#一份完整的测试计划应包括哪些内容？" class="headerlink" title="一份完整的测试计划应包括哪些内容？"></a>一份完整的测试计划应包括哪些内容？</h4><ul><li><p>测试范围<br>测试范围描述的是被测对象以及主要的测试内容，确定测试范围的过程在一定程度上也是对需求分析结果的进一步检验，这将有助于在早期就发现潜在的测试遗漏。<br>由于不可能进行穷尽测试，而且测试的时间和资源都是有限的，所以必须有所取舍，进行有针对性的测试。因此，测试范围中需要明确“测什么”和“不测什么”很重要。</p></li><li><p>测试策略<br>测试策略需要明确“先测什么后测什么”和“如何来测”这两个问题，同时会要求我们明确测试的重点，以及各项测试的先后顺序，以及采用什么样的测试类型和测试方法。<br>1、功能测试<br>需要先列出主要的功能测试点，并决定哪些测试点适合采用自动化测试，并且决定具体使用什么样的框架和技术；<br>对于需要手工测试的测试点，要决定采用什么类型的测试用例设计方法，以及如何准备相关的测试数据；<br>另外，还要评估被测软件的可测试性，如果有可测试性的问题，需要提前考虑切实可行的变通方案，甚至要求开发人员提供可测试性的接口。<br>2、产品需求测试：在开发和测试工作开展前，保证所有人对需求理解的一致性。<br>3、兼容性测试<br>Web测试需要确定覆盖的浏览器类型和版本，移动设备测试需要确定覆盖的设备类型和具体iOS/Android的版本等。<br>如果是既有产品，可以通过大数据技术分析产品的历史数据得出Top 30%的移动设备以及iOS/Android的版本列表，还有机型分辨率等信息，然后优先覆盖这部分进行兼容性测试，往往一些典型的兼容性问题都可以在这里被发现，对于那些只在小版本或者非主流机型上特有的兼容性问题，可以通过完整的后台log来帮助收集相关信息。<br>如果是一个全新的产品，可以通过TalkingData这样的网站来查看目前主流的移动设备，分辨率大小、iOS/Android版本等信息来确定测试范围。<br>4、性能测试<br>5、接口测试、集成测试、安全测试、容量验证、安装测试、故障恢复测试等</p></li><li><p>测试资源<br>测试计划的目的就是，保证在有限资源下的产出最大化，所以，测试资源就是需要明确“谁来测”和“在哪个环境测”这两个问题。</p></li><li><p>测试进度<br>主要描述各类测试的开始时间，所需工作量，预计完成时间，并以此为依据来建议最终产品的上线发布时间。在敏捷模式下，测试活动贯穿于整个开发过程，很多测试工作会和开发工作同步进行。</p></li><li><p>测试风险预估<br>通常需求变更、开发延期、发现重大缺陷和人员变动是引入项目测试风险的主要原因。对于需求变更，比如增加需求、删减需求、修改需求等，一定要重新进行测试需求分析，确定变更后的测试范围和测试资源，并与项目经理和产品经理及时沟通因此引起的测试进度变化。<br>所以，在制定测试计划时，就要预估整个测试过程中可能存在的潜在风险，以及当这些风险发生时的应对策略。</p></li></ul><p>谢谢阅读。</p></div><footer class="post-footer"><div class="post-nav"><div class="post-nav-item"><a href="/2019/12/30/javascript-module/" rel="prev" title="JavaScript 模块化"><i class="fa fa-chevron-left"></i> JavaScript 模块化</a></div><div class="post-nav-item"><a href="/2020/01/01/case-study-about-css-animation-and-svg-filter/" rel="next" title="CSS动画与SVG滤镜的结合应用">CSS动画与SVG滤镜的结合应用 <i class="fa fa-chevron-right"></i></a></div></div></footer></article></div></div></div><div class="toggle sidebar-toggle"><span class="toggle-line toggle-line-first"></span> <span class="toggle-line toggle-line-middle"></span> <span class="toggle-line toggle-line-last"></span></div><aside class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc">Table of Contents</li><li class="sidebar-nav-overview">Overview</li></ul><div class="post-toc-wrap sidebar-panel"><div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#测试计划是否有存在的必要？"><span class="nav-number">1.</span> <span class="nav-text">测试计划是否有存在的必要？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缺少测试计划会有哪些影响？"><span class="nav-number">2.</span> <span class="nav-text">缺少测试计划会有哪些影响？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一份完整的测试计划应包括哪些内容？"><span class="nav-number">3.</span> <span class="nav-text">一份完整的测试计划应包括哪些内容？</span></a></li></ol></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><p class="site-author-name" itemprop="name">WisdomGarden Product</p><div class="site-description" itemprop="description">WisdomGarden Product Blog</div></div><div class="site-state-wrap motion-element"><nav class="site-state"><div class="site-state-item site-state-posts"><a href="/archives/"><span class="site-state-item-count">11</span> <span class="site-state-item-name">posts</span></a></div><div class="site-state-item site-state-categories"><a href="/categories/"><span class="site-state-item-count">1</span> <span class="site-state-item-name">categories</span></a></div><div class="site-state-item site-state-tags"><a href="/tags/"><span class="site-state-item-count">7</span> <span class="site-state-item-name">tags</span></a></div></nav></div></div></div></aside><div id="sidebar-dimmer"></div></div></main><footer class="footer"><div class="footer-inner"><div class="copyright">&copy; <span itemprop="copyrightYear">2020</span> <span class="with-love"><i class="fa fa-user"></i> </span><span class="author" itemprop="copyrightHolder">WisdomGarden Product</span></div><script>function leancloudSelector(url) {
+    return document.getElementById(url).querySelector('.leancloud-visitors-count');
+  }
+  if (CONFIG.page.isPost) {
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = visitors.getAttribute('id').trim();
+      var title = visitors.getAttribute('data-flag-title').trim();
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+              leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .then(response => response.json())
+              .catch(error => {
+                console.log('Failed to save visitor count', error);
+              })
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  } else {
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return element.getAttribute('id').trim();
+      });
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length === 0) {
+            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
+              element.innerText = 0;
+            });
+            return;
+          }
+          for (let item of results) {
+            let { url, time } = item;
+            leancloudSelector(url).innerText = time;
+          }
+          for (let url of entries) {
+            var element = leancloudSelector(url);
+            if (element.innerText == '') {
+              element.innerText = 0;
+            }
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  }
+
+  fetch('https://app-router.leancloud.cn/2/route?appId=CP8WSyQWeQ5mmzmbSmnEWMEi-MdYXbMMI')
+    .then(response => response.json())
+    .then(({ api_server }) => {
+      var Counter = (method, url, data) => {
+        return fetch(`https://${api_server}/1.1${url}`, {
+          method: method,
+          headers: {
+            'X-LC-Id': 'CP8WSyQWeQ5mmzmbSmnEWMEi-MdYXbMMI',
+            'X-LC-Key': 'FDvJGLIS6IClTgCBJ6yhUTJG',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    });</script></div></footer></div><script src="/lib/anime.min.js"></script><script src="/lib/velocity/velocity.min.js"></script><script src="/lib/velocity/velocity.ui.min.js"></script><script src="/js/utils-6cec7bbff5f7ac7b1a060ad2739fe0e4.js"></script><script src="/js/motion-db947fcb73053e43b03d60c0db8d0a3e.js"></script><script src="/js/schemes/pisces-d4ec3ab52f0ad1a1bce16ad322a14701.js"></script><script src="/js/next-boot-c47528c6b7d3020a3dfd391c262dfebd.js"></script></body></html>
